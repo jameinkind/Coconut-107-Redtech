@@ -2,6 +2,8 @@
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 {% import "Ceres::PageDesign.Macros.ItemName" as ItemName %}
 
+{% set robots       = block('robots') | default('INDEX, FOLLOW') %}
+
 {% block PartialHead %}
     <meta name="description" content="{{ item.documents[0].data.texts.metaDescription }}">
     <meta name="keywords" content="{{ item.documents[0].data.texts.keywords }}">
